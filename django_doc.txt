@@ -1,0 +1,129 @@
+Creating a Virtual Environment for django project.
+
+Take your terminal and Create a envs directory and Change into the envs directory.
+
+
+--------------------------------------------------------
+eg: 
+yadhu@yadhu-VirtualBox:~$ cd yadhu/dev/envs/
+yadhu@yadhu-VirtualBox:~/yadhu/dev/envs$
+--------------------------------------------------------
+
+
+
+ 
+Run python3 -m venv <name_of_virtualenv>
+
+eg :
+yadhu@yadhu-VirtualBox:~/yadhu/dev/envs$ python3 -m venv mysite
+
+after run this commant it will creat the virtual environment and redirct to the path
+
+yadhu@yadhu-VirtualBox:~/yadhu/dev/envs$
+
+
+
+
+------------------------------------------------------------
+
+After this you have to activate your Virtual Environment for development.
+
+Activate Virtual Environment
+............................
+eg :
+yadhu@yadhu-VirtualBox:~/yadhu/dev/envs$ source mysite/bin/activate
+
+After Run this commant your Virtual Environment will be activate.
+
+eg:
+(mysite) yadhu@yadhu-VirtualBox:~/yadhu/dev/envs$
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Installing Django to the environment.
+......................................
+eg:
+(mysite) yadhu@yadhu-VirtualBox:~/yadhu/dev/envs$ pip3 install django
+
+After Run this commant it will download and install django to your environment.
+
+eg : 
+
+Collecting django
+  Downloading https://files.pythonhosted.org/packages/b8/6f/9a4415cc4fe9228e26ea53cf2005961799b2abb8da0411e519fdb74754fa/Django-3.1.7-py3-none-any.whl (7.8MB)
+    100% |████████████████████████████████| 7.8MB 93kB/s 
+Collecting pytz (from django)
+  Using cached https://files.pythonhosted.org/packages/70/94/784178ca5dd892a98f113cdd923372024dc04b8d40abe77ca76b5fb90ca6/pytz-2021.1-py2.py3-none-any.whl
+Collecting sqlparse>=0.2.2 (from django)
+  Using cached https://files.pythonhosted.org/packages/14/05/6e8eb62ca685b10e34051a80d7ea94b7137369d8c0be5c3b9d9b6e3f5dae/sqlparse-0.4.1-py3-none-any.whl
+Collecting asgiref<4,>=3.2.10 (from django)
+  Using cached https://files.pythonhosted.org/packages/89/49/5531992efc62f9c6d08a7199dc31176c8c60f7b2548c6ef245f96f29d0d9/asgiref-3.3.1-py3-none-any.whl
+Installing collected packages: pytz, sqlparse, asgiref, django
+Successfully installed asgiref-3.3.1 django-3.1.7 pytz-2021.1 sqlparse-0.4.1
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Django is installed and which version by running the following command in terminal 
+
+eg:
+(mysite) yadhu@yadhu-VirtualBox:~/yadhu/dev/envs$ python -m django --version
+3.1.7
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Creating a django project
+-----------------------------
+
+Change into the project directory
+
+eg:
+(mysite) yadhu@yadhu-VirtualBox:~/yadhu/dev$ cd projects/
+
+and run the commant for creating project
+
+eg : 
+(mysite) yadhu@yadhu-VirtualBox:~/yadhu/dev/projects$ django-admin startproject mysite
+
+
+after run this commant it will create a mysite directory in your current directory. the project and redirct to the path
+
+eg :
+(mysite) yadhu@yadhu-VirtualBox:~/yadhu/dev/projects$
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+To run the project in development server
+..........................................
+
+Change into the the project directory. 
+
+and run the commant.
+
+eg : 
+(mysite) yadhu@yadhu-VirtualBox:~/yadhu/dev/projects$ cd mysite/
+(mysite) yadhu@yadhu-VirtualBox:~/yadhu/dev/projects/mysite$ python3 manage.py runserver
+
+eg:
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+March 01, 2021 - 16:31:17
+Django version 3.1.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
